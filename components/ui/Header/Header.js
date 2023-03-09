@@ -44,7 +44,7 @@ export default function Header(props) {
   const logoutClickHandler = () => {
     dispatch({ type: 'USER_LOGOUT' });
     Cookies.remove('userInfo');
-    router.push('/login');
+    router.push('/admin/login');
   };
   return (
     <AppBar style={{ background: '#B8DCEA' }} position="fixed" className={classes.appBar}>
