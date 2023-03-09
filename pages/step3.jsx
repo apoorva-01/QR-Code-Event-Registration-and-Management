@@ -10,7 +10,7 @@ export default function step3() {
       <Typography component="p" sx={{ fontWeight: 700 }} variant="h6">
         We have send this on your email
       </Typography>
-      <QRCode value={"vermaapoorva0510@gmail.com"} />
+      <QRCode value={"https://qr-code-event-registration-and-management-1x2la38h5-apoorva-01.vercel.app/attendance/vermaapoorva0510@gmail.com"} />
     </>
   )
 }

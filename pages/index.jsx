@@ -1,4 +1,5 @@
 import React, { useContext, useEffect} from 'react';
+
 import { useRouter } from 'next/router';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
@@ -59,7 +60,6 @@ export default function SignInSide() {
                 <Controller
                   name="email"
                   control={control}
-                  defaultValue=""
                   rules={{
                     required: true,
                   }}
@@ -86,7 +86,6 @@ export default function SignInSide() {
                 <Controller
                   name="mobile"
                   control={control}
-                  defaultValue=""
                   rules={{
                     required: true,
                     minLength: 8,

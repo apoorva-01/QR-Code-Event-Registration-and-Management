@@ -31,7 +31,7 @@ export default function SignInSide() {
   const { userInfo } = state;
   useEffect(() => {
     if (userInfo) {
-      router.push('/');
+      router.push('/admin');
     }
   }, [userInfo,router]);
 
@@ -44,7 +44,7 @@ export default function SignInSide() {
       });
       dispatch({ type: 'USER_LOGIN', payload: data });
       Cookies.set('userInfo', data);
-      router.push(redirect || '/admin/data');
+      router.push(redirect || '/admin');
     } catch (err) {
       enqueueSnackbar(
         err.response.data ? err.response.data.message : err.message,
@@ -90,7 +90,7 @@ export default function SignInSide() {
                       fullWidth
                       id="email"
                       label="Email"
-                      inputProps={{ type: 'text' }}
+                      inputProps={{ type: 'email' }}
                       error={Boolean(errors.email)}
                       helperText={
                         errors.email?'Email is required'

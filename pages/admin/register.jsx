@@ -31,7 +31,7 @@ export default function SignInSide() {
   const { userInfo } = state;
   useEffect(() => {
     if (userInfo) {
-      router.push('/');
+      router.push('/admin');
     }
   }, [userInfo,router]);
 
@@ -45,7 +45,7 @@ export default function SignInSide() {
       });
     //   dispatch({ type: 'USER_LOGIN', payload: data });
       Cookies.set('userInfo', data);
-      router.push(redirect || '/admin/data');
+      router.push(redirect || '/admin');
     } catch (err) {
       enqueueSnackbar(
         err.response.data ? err.response.data.message : err.message,

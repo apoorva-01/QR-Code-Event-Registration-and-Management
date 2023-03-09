@@ -23,7 +23,7 @@ import {
 } from "../../../utils/LayoutContext";
 
 const structure = [
-  { id: 22, label: "All Entries", link: "/admin/data", icon: <DataObjectIcon/> },
+  { id: 22, label: "All Entries", link: "/admin", icon: <DataObjectIcon/> },
   { id: 3, type: 'divider' },
   { id: 4, type: "title", label: "Details" },
   { id: 7, label: "Profile", link: "/admin/profile", icon: <StorageSharpIcon /> },

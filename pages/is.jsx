@@ -17,21 +17,6 @@ import Link from 'next/link'
 import axios from 'axios';
 const theme = createTheme();
 
-const PREFIX_OPTIONS = [
-    {
-        value: 'mr',
-        label: 'Mr.',
-    },
-    {
-        value: 'ms',
-        label: 'Ms.',
-    },
-    {
-        value: 'mrs',
-        label: 'Mrs.',
-    },
-];
-
 
 export default function SignInSide() {
     const {
@@ -42,30 +27,20 @@ export default function SignInSide() {
     const { enqueueSnackbar, closeSnackbar } = useSnackbar();
     const router = useRouter();
     const { redirect } = router.query; // login?redirect=/shipping
-    useEffect(() => {
-        const oldData = Cookies.getJSON('registeringUserData') || {};
-        if (!oldData) {
-            router.push('/');
-        }
-    }, [router]);
 
-    const submitHandler = async ({ registerationType, prefix, firstName, lastName, organisation, address }) => {
+
+
+    const submitHandler = async ({ email, mobile }) => {
         closeSnackbar();
         try {
-            const oldData = Cookies.getJSON('registeringUserData') || {};
-            const data = { "registerationType": registerationType, "prefix": prefix, "firstName": firstName, "lastName": lastName, "organisation": organisation, "address": address }
-            const newData = { ...oldData, data }
-            Cookies.set('registeringUserData', newData);
-
-            await axios.post('/api/addData', { prefix, firstName, lastName, email: oldData.email, mobile: oldData.mobile, organisation, registerationType, address });
-            router.push(redirect || '/step3');
-
+          Cookies.set('registeringUserData', {"email":email,"mobile":mobile} );
+          router.push(redirect || '/step2');
         } catch (err) {
-            enqueueSnackbar("There is some error", { variant: 'error' });
+          enqueueSnackbar("There is some error",
+            { variant: 'error' }
+          );
         }
-    };
-
-    const type = watch('registerationType'); // get the value of the gender field
+      };
 
     return (
         <ThemeProvider theme={theme}>
@@ -78,7 +53,7 @@ export default function SignInSide() {
                     }}
                 >
                     <Typography component="p" sx={{ fontWeight: 700 }} variant="h6">
-                        Registeration Type
+                    Registeration
                     </Typography>
                     <Box sx={{ mt: 1 }}>
 
@@ -208,7 +183,7 @@ export default function SignInSide() {
                         />
 
                         <Stack direction="row" sx={{ my: 2 }} spacing={2}>
-                            <Link href="/">
+                            <Link href="/index">
                                 <Button className='hvr-grow' type="submit"
                                     style={{ width: '100%', backgroundColor: '#38B6FF', color: 'white', marginTop: '2rem', marginBottom: '2rem' }} >
                                     Back
