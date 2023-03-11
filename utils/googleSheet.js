@@ -72,6 +72,30 @@ export async function fetchRow(email) {
   }
 
 }
+export async function fetchRowUsingMobile(mobile) {
+  try {
+    const response = await sheets.spreadsheets.values.get({
+      spreadsheetId: process.env.SPREADSHEET_ID,
+      range: process.env.SHEET_NAME, // sheet name
+    });
+
+    const rows = response.data.values;
+    const rowIndex = rows.findIndex(row => row[4] === mobile);
+
+    console.log("rows[rowIndex]",rows[rowIndex])
+
+    if (rowIndex >= 0) {
+      return rows[rowIndex];
+    }
+    else{
+      return [];
+    }
+  }
+  catch (err) {
+    console.error(err);
+  }
+
+}
 
 // Attendance DATA
 export async function addAttendance(email) {

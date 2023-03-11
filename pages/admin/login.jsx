@@ -137,12 +137,12 @@ export default function SignInSide() {
                 />
 
                   <Button className='hvr-grow' type="submit" 
-                    style={{ width: '100%', backgroundColor: '#38B6FF', color: 'white', marginTop: '2rem', marginBottom: '2rem' }} >
+                    style={{ width: '100%', backgroundColor: '#202082', color: 'white', marginTop: '2rem', marginBottom: '2rem' }} >
                     Log In
                   </Button>
                 
                   <Typography textAlign="center">Don't have account?
-                  <Link  href="/admin/register" style={{color:"#38B6FF"}}>  Register Now</Link>
+                  <Link  href="/admin/register" style={{color:"#202082"}}>  Register Now</Link>
                   </Typography>
               </Box>
             </Box>

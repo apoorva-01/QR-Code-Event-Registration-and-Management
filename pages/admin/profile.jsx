@@ -187,7 +187,7 @@ function Profile() {
           </Card>
         </Grid>
         <Grid item md={0} lg={6}>
-        <Image src='/logo.svg'width={400} height={400}alt={'IGSCS LOGO'} ></Image>
+        {/* <Image src='/logo.svg'width={400} height={400}alt={'LOGO'} ></Image> */}
       </Grid>
       </Grid>
     </Layout>

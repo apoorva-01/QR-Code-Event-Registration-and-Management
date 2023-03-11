@@ -2,8 +2,8 @@ module.exports = {
   reactStrictMode: true,
   productionBrowserSourceMaps: false,
   env: {
-    APP_TITLE: 'Next.JS Web App Started',
-    LOGO_URL: '/logo.svg',
+    APP_TITLE: 'CII Registration',
+    LOGO_URL: '/logo.png',
     LOGO_Height: 500,
     LOGO_Width: 500,
   },

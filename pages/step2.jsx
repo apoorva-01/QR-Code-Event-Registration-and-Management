@@ -210,12 +210,12 @@ export default function SignInSide() {
                         <Stack direction="row" sx={{ my: 2 }} spacing={2}>
                             <Link href="/">
                                 <Button className='hvr-grow' type="submit"
-                                    style={{ width: '100%', backgroundColor: '#38B6FF', color: 'white', marginTop: '2rem', marginBottom: '2rem' }} >
+                                    style={{ width: '100%', backgroundColor: '#202082', color: 'white', marginTop: '2rem', marginBottom: '2rem' }} >
                                     Back
                                 </Button>
                             </Link>
                             <Button className='hvr-grow' type="submit"
-                                style={{ width: '100%', backgroundColor: '#38B6FF', color: 'white', marginTop: '2rem', marginBottom: '2rem' }} >
+                                style={{ width: '100%', backgroundColor: '#202082', color: 'white', marginTop: '2rem', marginBottom: '2rem' }} >
                                 Next
                             </Button>
                         </Stack>

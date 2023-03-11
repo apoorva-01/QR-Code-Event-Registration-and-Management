@@ -149,7 +149,7 @@ export default function SignInSide() {
                   }}
                   render={({ field }) => (
                     <TextField
-                      sx={{ mb: 4 }}
+                      sx={{ my: 2 }}
                       variant="outlined"
                       fullWidth
                       id="password"
@@ -175,11 +175,11 @@ export default function SignInSide() {
                 />
 
                   <Button className='hvr-grow' type="submit" 
-                    style={{ width: '100%', backgroundColor: '#38B6FF', color: 'white', marginTop: '2rem', marginBottom: '2rem' }} >
+                    style={{ width: '100%', backgroundColor: '#202082', color: 'white', marginTop: '2rem', marginBottom: '2rem' }} >
                     SignUp
                   </Button>
                   <Typography textAlign="center">Already have an account?
-                  <Link  href="/admin/login" style={{color:"#38B6FF"}}> LogIn</Link></Typography>
+                  <Link  href="/admin/login" style={{color:"#202082"}}> LogIn</Link></Typography>
               
               </Box>
             </Box>
