@@ -13,7 +13,7 @@ import axios from 'axios'
 import Link from 'next/link'
 const theme = createTheme();
 
-export default function SignInSide() {
+export default function AlreadyRegistered() {
   const {
     handleSubmit,
     control,

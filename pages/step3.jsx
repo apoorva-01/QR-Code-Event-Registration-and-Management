@@ -5,7 +5,7 @@ import QRCode from 'qrcode.react';
 import Cookies from 'js-cookie';
 import axios from 'axios';
 import Button from '@mui/material/Button';
-export default function step3() {
+export default function Step3() {
 
   function send(email) {
     const data = axios.post('/api/email',

@@ -5,7 +5,7 @@ import Cookies from "js-cookie";
 import QRCode from 'qrcode.react';
 import axios from 'axios';
 import Button from "@mui/material/Button";
-export default function step3() {
+export default function Step2() {
   useEffect(() => {
     const oldData = Cookies.getJSON("alreadyRegisteredUserData") || {};
     setFinalData(oldData);

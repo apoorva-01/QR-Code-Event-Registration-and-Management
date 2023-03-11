@@ -18,7 +18,7 @@ import { useSnackbar } from 'notistack';
 import Link from 'next/link'
 const theme = createTheme();
 
-export default function SignInSide() {
+export default function Register() {
   const {
     handleSubmit,
     control,

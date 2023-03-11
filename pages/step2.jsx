@@ -33,7 +33,7 @@ const PREFIX_OPTIONS = [
 ];
 
 
-export default function SignInSide() {
+export default function Step2() {
     const {
         handleSubmit,
         control, watch,
